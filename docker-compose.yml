@@ -1,0 +1,11 @@
+version: "3.1"
+services:
+    cloud9:
+        image: pedroschmitt/cloud9-rails
+        ports:
+            - 8181:8181
+            - 3000:3000
+        volumes: 
+            - ./workspace:/workspace
+        command: "--auth valente:flora"
+# sudo docker run -d -v $(pwd):/workspace -p 8181:8181 -p 3000:3000 pedroschmitt/cloud9-rails --auth valente:flora
